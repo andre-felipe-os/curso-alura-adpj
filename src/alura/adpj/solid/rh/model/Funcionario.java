@@ -21,12 +21,12 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
-	public BigDecimal getSalario() {
-		return salario;
+	public LocalDate getDataUltimoReajuste() {
+		return dataUltimoReajuste;
 	}
 
-	public void reajustarSalario(BigDecimal aumento) {
-		
+	public BigDecimal getSalario() {
+		return salario;
 	}
 
 	public void atualizarSalario(BigDecimal novoSalario) {
