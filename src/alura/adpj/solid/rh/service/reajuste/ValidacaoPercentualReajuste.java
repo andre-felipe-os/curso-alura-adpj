@@ -4,11 +4,11 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import alura.adpj.solid.rh.ValidacaoException;
-import alura.adpj.solid.rh.model.Funcionario;
+import alura.adpj.solid.rh.model.Interno;
 
 public class ValidacaoPercentualReajuste implements ValidacaoReajuste {
 	
-	public void validar(Funcionario funcionario, BigDecimal aumento) {
+	public void validar(Interno funcionario, BigDecimal aumento) {
 		BigDecimal salarioAtual = funcionario.getSalario();
 		BigDecimal percentualReajuste = aumento.divide(salarioAtual, RoundingMode.HALF_UP);
 

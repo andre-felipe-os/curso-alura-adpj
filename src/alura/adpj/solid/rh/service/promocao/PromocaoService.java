@@ -2,11 +2,11 @@ package alura.adpj.solid.rh.service.promocao;
 
 import alura.adpj.solid.rh.ValidacaoException;
 import alura.adpj.solid.rh.model.Cargo;
-import alura.adpj.solid.rh.model.Funcionario;
+import alura.adpj.solid.rh.model.Interno;
 
 public class PromocaoService {
 	
-	public void promover(Funcionario funcionario, boolean metaBatida) {
+	public void promover(Interno funcionario, boolean metaBatida) {
 		Cargo cargoAtual = funcionario.getCargo();
 		if (cargoAtual == Cargo.GERENTE) {
 			throw new ValidacaoException("Gerentes não podem ser promovidos.");

@@ -1,18 +1,13 @@
 package alura.adpj.solid.rh.model;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDate;
 
-import alura.adpj.solid.rh.ValidacaoException;
-
-public class Funcionario {
+public abstract class Funcionario {
 	
 	private String nome;
 	private String cpf;
-	private Cargo cargo;
-	private BigDecimal salario;
-	private LocalDate dataUltimoReajuste;
+	protected Cargo cargo;
+	protected BigDecimal salario;
 	
 	public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
 		this.nome = nome;
@@ -21,25 +16,20 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
-	public LocalDate getDataUltimoReajuste() {
-		return dataUltimoReajuste;
+	public String getNome() {
+		return nome;
 	}
-
-	public BigDecimal getSalario() {
-		return salario;
+	
+	public String getCpf() {
+		return cpf;
 	}
-
-	public void atualizarSalario(BigDecimal novoSalario) {
-		this.salario = novoSalario;
-		this.dataUltimoReajuste = LocalDate.now();
-	}
-
+	
 	public Cargo getCargo() {
 		return cargo;
 	}
-
-	public void promover(Cargo novoCargo) {
-		this.cargo = novoCargo;
+	
+	public BigDecimal getSalario() {
+		return salario;
 	}
 
 }

@@ -5,11 +5,11 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 import alura.adpj.solid.rh.ValidacaoException;
-import alura.adpj.solid.rh.model.Funcionario;
+import alura.adpj.solid.rh.model.Interno;
 
 public class ValidacaoPeriodicidadeEntreReajustes {
 	
-	public void validar(Funcionario funcionario, BigDecimal aumento) {
+	public void validar(Interno funcionario, BigDecimal aumento) {
 		LocalDate dataUltimoReajuste = funcionario.getDataUltimoReajuste();
 		LocalDate dataAtual = LocalDate.now();
 		
