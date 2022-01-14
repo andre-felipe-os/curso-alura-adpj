@@ -2,19 +2,18 @@ package alura.adpj.patterns.loja;
 
 import java.math.BigDecimal;
 
-import alura.adpj.patterns.loja.desconto.CalculadoraDeDescontos;
+import alura.adpj.patterns.loja.imposto.CalculadoraDeImpostos;
+import alura.adpj.patterns.loja.imposto.ISS;
 import alura.adpj.patterns.loja.orcamento.Orcamento;
 
 public class TestesImpostos {
 
 	public static void main(String[] args) {
 		
-		Orcamento primeiro = new Orcamento(new BigDecimal("200"), 6);
-		Orcamento segundo = new Orcamento(new BigDecimal("1000"), 1);
+		Orcamento orcamento = new Orcamento(new BigDecimal("100"), 1);
+		CalculadoraDeImpostos calc = new CalculadoraDeImpostos();
 		
-		CalculadoraDeDescontos calc = new CalculadoraDeDescontos();
-		System.out.println(calc.calcular(primeiro));
-		System.out.println(calc.calcular(segundo));
+		System.out.println(calc.calcular(orcamento, new ISS()));
 
 	}
 
