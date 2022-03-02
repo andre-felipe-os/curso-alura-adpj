@@ -3,6 +3,7 @@ package alura.adpj.patterns.loja.orcamento;
 import java.math.BigDecimal;
 
 import alura.adpj.patterns.loja.orcamento.situacao.EmAnalise;
+import alura.adpj.patterns.loja.orcamento.situacao.Finalizado;
 import alura.adpj.patterns.loja.orcamento.situacao.SituacaoOrcamento;
 
 public class Orcamento {
@@ -44,6 +45,11 @@ public class Orcamento {
 
 	public void setSituacao(SituacaoOrcamento situacao) {
 		this.situacao = situacao;
+	}
+
+	public boolean isFinalizado() {
+		// TODO Auto-generated method stub
+		return situacao instanceof Finalizado;
 	}
 
 }
